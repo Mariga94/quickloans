@@ -1,5 +1,53 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,700&family=Raleway:wght@400;500;600;700&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --primary-color: #2a6877;
+    --bg-primary: var(--primary-color);
+  }
+
+  .dark {
+  }
+
+  * {
+    @apply box-border m-0 p-0;
+  }
+
+  body {
+    font-family: "Raleway", sans-serif;
+  }
+
+  h1 {
+    @apply font-bold text-[--primary-color] text-7xl tracking-[0.03rem];
+  }
+
+  h2 {
+    @apply text-4xl font-bold text-[--primary-color];
+  }
+
+  h3 {
+    @apply text-3xl font-medium leading-6;
+  }
+
+  button {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .card {
+    @apply border-2 rounded-[2.4rem] px-4 py-7 flex flex-col gap-4 justify-center items-center;
+  }
+
+  .services {
+    @apply bg-green-50;
+  }
+
+  .button {
+    @apply rounded-full px-5 py-3 border-2 block;
+  }
+}
